@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 url_api = "https://tenvagoss.pythonanywhere.com"
-app.secret_key = '6LeoBfIpAAAAAKi8ooFzL8knFiKGwqfCnOQrCF6c'
+app.secret_key = ''
 
 
 def obtener_mes_actual():
