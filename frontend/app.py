@@ -43,7 +43,7 @@ def verificar_captcha(captcha_response):
     """ Valida el captcha desde el servidor de google
         retorna true si es correcto o false si no
     """
-    secret = "6LdA0_UpAAAAAEjzhk363bZfGDwgt8GCtvAMFZi2"
+    secret = ""
     payload = {'response':captcha_response, 'secret':secret}
     response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
     respuesta = response.json()
@@ -69,7 +69,7 @@ def contacto():
             flash("Completa el desafio reCaptcha")
             return redirect(url_for('home')+"#contacto")
  
-        return redirect("https://formsubmit.co/c692c80bc93633c1c420822f2cee9914", code=307)
+        return redirect("https://formsubmit.co/x", code=307)
 
     redirect(url_for('home'))
 
